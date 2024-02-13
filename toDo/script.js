@@ -39,8 +39,10 @@ function checkInputs() {
 
     if (taskName !== '' && taskContent !== '') {
         addButton.disabled = false;
+        addButton.style.backgroundColor = 'deepskyblue';
     } else {
         addButton.disabled = true;
+        addButton.style.backgroundColor = 'lightskyblue';
     }
 }
 
