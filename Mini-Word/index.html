@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mini-Word</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+<div class="container">
+    <div class="input-group">
+        <label for="colorInput">Choisir une couleur:</label>
+        <input type="color" id="colorInput" name="colorInput" onchange="changeColor()">
+    </div>
+
+    <div class="input-group">
+        <label for="fontSizeInput">Choisir la taille du font:</label>
+        <input type="number" id="fontSizeInput" name="fontSizeInput" onchange="changeFont()">
+    </div>
+
+    <div class="input-group">
+        <label for="font">Choisir le font:</label>
+        <select id="font" name="font" onchange="changeFont()">
+            <option value="Arial">Arial</option>
+            <option value="Calibri">Calibri</option>
+            <option value="Trebuchet">Trebuchet</option>
+            <option value="Georgia">Georgia</option>
+        </select>
+    </div>
+
+
+    <div class="input-group">
+        <label for="textArea">Write something:</label>
+        <textarea id="textArea" name="textArea" rows="2" cols="50"></textarea>
+        <button onclick = "submit()">Submit</button>
+    </div>
+
+    <div class="output-group">
+        <p id="output" class="output"></p>
+    </div>
+</div>
+</body>
+
+</html>
