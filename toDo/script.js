@@ -28,6 +28,8 @@ function addTask() {
         contentInput.value = '';
         addButton.style.backgroundColor = 'lightskyblue';
         tasksList.style.display = 'block';
+
+        listItem.style.backgroundColor = tasksList.children.length % 2 === 0 ? '#3498db' : '#fff';
     }
 }
 
