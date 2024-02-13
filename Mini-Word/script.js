@@ -15,6 +15,7 @@ function changeSize() {
 
 
 function submit() {
+    var body = document.getElementById("body");
     let text = document.getElementById("textArea").value;
     let newText = "";
 
@@ -26,4 +27,6 @@ function submit() {
         }
     }
     document.getElementById("output").innerHTML = newText;
+    document.body.style.backgroundImage = 'url("img2.jpg")';
 }
+
