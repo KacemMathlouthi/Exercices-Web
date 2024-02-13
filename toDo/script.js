@@ -26,7 +26,7 @@ function addTask() {
 
         taskInput.value = '';
         contentInput.value = '';
-
+        addButton.style.backgroundColor = 'lightskyblue';
         tasksList.style.display = 'block';
     }
 }
