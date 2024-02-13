@@ -1,6 +1,6 @@
 function changeColor() {
-    let color = document.getElementById("colorInput")
-    document.getElementById("output").style.color = JSON.stringify(color);
+    let color = document.getElementById("colorInput").value;
+    document.getElementById("output").style.color = color;
 }
 
 function changeFont() {
@@ -9,12 +9,13 @@ function changeFont() {
 }
 
 function changeSize() {
-    let size = document.getElementById("sizeInput")
-    document.getElementById("output").style.fontSize = JSON.stringify(size);
+    let size = document.getElementById("fontSizeInput").value;
+    document.getElementById("output").style.fontSize = size + "px";
 }
 
 
 function submit() {
+    var body = document.getElementById("body");
     let text = document.getElementById("textArea").value;
     let newText = "";
 
@@ -26,4 +27,6 @@ function submit() {
         }
     }
     document.getElementById("output").innerHTML = newText;
+    document.body.style.backgroundImage = 'url("img2.jpg")';
 }
+
