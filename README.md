@@ -25,6 +25,7 @@
 - **Objectif :** Créer une liste ordonnée avec des éléments `interactifs`.
 - **Mise en œuvre :** Change la couleur d'un élément de la liste au `clic`.
 
-#### ADDITIONAL POINTS
-- This repo is for educational purposes and currently does not accept contributions.
-- The contributors' `creativity` is showcased throughout the submissions, we tried to enhance the learning experience by trying out different functionalities that we found fun to implement.
+#### REMARQUES:
+- Ce dépôt est destiné à des fins éducatives et n'accepte actuellement pas de contributions.
+- La `créativité` des contributeurs est mise en valeur tout au long des soumissions, nous avons essayé d'améliorer l'expérience d'apprentissage en expérimentant différentes fonctionnalités que nous avons trouvées amusantes à implémenter.
+
