@@ -1,19 +1,23 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', initialize);
+
+function initialize() {
     var listItems = document.querySelectorAll('.ol li');
+    listItems.forEach(addClickEvent);
+}
 
-    listItems.forEach(function (item) {
-        item.addEventListener('click', function () {
-            var randomColor = generateRandomColor();
-            this.style.backgroundColor = randomColor;
-        });
-    });
+function addClickEvent(item) {
+    item.addEventListener('click', changeBackgroundColor);
+}
 
-    function generateRandomColor() {
-        var letters = '0123456789ABCDEF';
-        var color = '#';
-        for (var i = 0; i < 6; i++) {
-            color += letters[Math.floor(Math.random() * 16)];
-        }
-        return color;
-    }
-});
+function changeBackgroundColor() {
+    var randomColor = generateRandomColor();
+    this.style.backgroundColor = randomColor;
+}
+
+function generateRandomColor() {
+    var red = Math.floor(Math.random() * 256);
+    var green = Math.floor(Math.random() * 256);
+    var blue = Math.floor(Math.random() * 256);
+
+    return 'rgb(' + red + ',' + green + ',' + blue + ')';
+}
