@@ -1,17 +1,21 @@
 document.addEventListener('DOMContentLoaded', initialize);
 
 function initialize() {
-    var listItems = document.querySelectorAll('.ol li');
-    listItems.forEach(addClickEvent);
+    var olElement = document.querySelector('.ol');
+    olElement.addEventListener('click', handleListClick);
 }
 
-function addClickEvent(item) {
-    item.addEventListener('click', changeBackgroundColor);
+function handleListClick(event) {
+    var clickedElement = event.target;
+
+    if (clickedElement.tagName === 'LI') {
+        changeBackgroundColor(clickedElement);
+    }
 }
 
-function changeBackgroundColor() {
+function changeBackgroundColor(item) {
     var randomColor = generateRandomColor();
-    this.style.backgroundColor = randomColor;
+    item.style.backgroundColor = randomColor;
 }
 
 function generateRandomColor() {
